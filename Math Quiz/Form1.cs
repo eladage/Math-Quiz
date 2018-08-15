@@ -24,6 +24,9 @@ namespace Math_Quiz
 
         public void StartTheQuiz()
         {
+            timeLabel.BackColor = Color.White;
+            timeLabel.ForeColor = Color.Black;
+
             // Fill in the addition problem.
             // Generate two random numbers to add.
             // Store the values in the variables 'addend1' and 'addend2'.
@@ -124,6 +127,8 @@ namespace Math_Quiz
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
                 sum.Value = addend1 + addend2;
                 difference.Value = minuend - subtrahend;
+                product.Value = multiplicand * multiplier;
+                quotient.Value = dividend / divisor;
                 startButton.Enabled = true;
             }
             if (timeLeft < 5)
